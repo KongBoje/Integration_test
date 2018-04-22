@@ -2,7 +2,7 @@
 
 I'm using the Glarmester_solution project for this assigment
 
-Integration test can be found ![here](https://github.com/KongBoje/Integration_test/blob/master/test/testIT/IntegrationTest.java)
+Integration test can be found [here](https://github.com/KongBoje/Integration_test/blob/master/test/testIT/IntegrationTest.java)
 
 ## Strategy for Integration testing
 
