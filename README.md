@@ -16,8 +16,8 @@ While only focusing on the integration testing of the database, I'm going to use
 | 2                   | Check database interactions      | Get prices for the three frametypes | 100/200/350     |
 
 ## Additional test
-Since the calculation of price is one of the main functionalities in this project, it only makes sence to also test on the calculatePrice method.
-\nTBD
+Since the calculation of price is one of the main functionalities in this project, it only makes sence to also test on the calculatePrice method.<br>
+TBD
 
 ## Test results
 TBD(picture)
