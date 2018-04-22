@@ -6,6 +6,7 @@
 package testIT;
 
 import glarmester_solution.data.DataAccessorDatabase;
+import glarmester_solution.logic.FrameType;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import org.junit.Test;
@@ -19,12 +20,33 @@ public class IntegrationTest {
     public IntegrationTest() {
     }
     
-    DataAccessorDatabase DAD = new DataAccessorDatabase();
+    DataAccessorDatabase accessor = new DataAccessorDatabase();
 
     @Test
     public void glassPriceTest() throws Exception {
-        double expectedResult = DAD.getGlassprice();
-        assertThat(expectedResult, is(300.0));
-        
+        double expectedResult = 300;
+        double actualResult = accessor.getGlassprice();
+        assertThat(actualResult, is(expectedResult));
+    }
+    
+    @Test
+    public void framePriceSimpleTest() {
+        double expectedResult = 100;
+        double actualResult = accessor.getFramePrice(FrameType.Simple);
+        assertThat(actualResult, is(expectedResult));
+    }
+    
+    @Test
+    public void framePriceOrnateTest() {
+        double expectedResult = 200;
+        double actualResult = accessor.getFramePrice(FrameType.Ornate);
+        assertThat(actualResult, is(expectedResult));
+    }
+    
+    @Test
+    public void framePriceLavishTest() {
+        double expectedResult = 350;
+        double actualResult = accessor.getFramePrice(FrameType.Lavish);
+        assertThat(actualResult, is(expectedResult));
     }
 }
